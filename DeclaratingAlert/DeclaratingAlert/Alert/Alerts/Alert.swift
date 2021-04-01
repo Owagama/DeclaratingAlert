@@ -41,7 +41,7 @@ fileprivate final class Alert: BaseAlert<() -> ()> {
 
 extension UIViewController {
     
-    var popup: AnyAlertCreatable<() -> ()> {
+    var alert: AnyAlertCreatable<() -> ()> {
         let instance = Alert(viewController: self)
         return AnyAlertCreatable(instance)
     }

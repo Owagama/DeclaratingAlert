@@ -52,7 +52,7 @@ fileprivate final class SafeTargetAlert<Target: AnyObject>: BaseAlert<(Target) -
 
 extension UIViewController {
     
-    func popup<Target: AnyObject>(_ target: Target) -> AnyAlertCreatable<(Target) -> ()> {
+    func alert<Target: AnyObject>(_ target: Target) -> AnyAlertCreatable<(Target) -> ()> {
         let instance = SafeTargetAlert(target: target, viewController: self)
         return AnyAlertCreatable(instance)
     }

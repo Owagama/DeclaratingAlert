@@ -22,9 +22,9 @@ extension ViewController {
         alertController.addAction(.init(title: "OK", style: .cancel))
         present(alertController, animated: true)
         /// OR
-        popup.presentSingleOK(title: "Title", message: "Message")
+        alert.presentSingleOK(title: "Title", message: "Message")
         // or
-        popup
+        alert
             .create(title: "Title", message: "Message")
             .cancel(title: "OK")
             .present()
@@ -43,14 +43,14 @@ extension ViewController {
         }))
         present(alertController, animated: true)
         /// OR
-        popup
+        alert
             .create(title: "Title", message: "Message")
             .action(title: "First Button", { print("First Button Tapped") })
             .action(title: "Second Button Tapped", { print("Second Button Tapped") })
             .cancel(title: "Cancel", { print("Cancel Tapped") })
             .present()
         // or
-        popup
+        alert
             .create(title: "Title", message: "Message")
             .action(title: "First Button")
             .action(title: "Second Button Tapped")
@@ -72,7 +72,7 @@ extension ViewController {
             print(type(of: self))
         }))
         /// OR
-        popup(self)
+        alert(self)
             .create(title: "Title", message: "Message")
             .cancel(title: "Cancel", { (self) in print(type(of: self)) })
             .present()
